@@ -1,0 +1,42 @@
+{
+  "name": "cli-generator",
+  "version": "0.1.0",
+  "description": "A Command Line Interface generator",
+  "homepage": "https://github.com/nandiheath/cli-generator#readme",
+  "author": "Nandi Wong",
+  "files": [
+    "LICENSE",
+    "bin/",
+    "templates/"
+  ],
+  "keywords": [
+    "cli",
+    "commander"
+  ],
+  "engines": {
+    "npm": ">= 8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1 && jest",
+    "pretest": "eslint .",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandiheath/cli-generator.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nandiheath/cli-generator/issues"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "commander": "^2.18.0"
+  },
+  "bin": {
+    "cli-gen": "./generator/bin/generator.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

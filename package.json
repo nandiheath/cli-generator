@@ -17,7 +17,7 @@
     "npm": ">= 8.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1 && jest",
+    "test": "nyc mocha --recursive test",
     "pretest": "eslint .",
     "precommit": "lint-staged"
   },
@@ -31,12 +31,21 @@
   },
   "dependencies": {
     "bluebird": "^3.5.2",
-    "commander": "^2.18.0"
+    "commander": "^2.18.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-node": "^7.0.1"
   },
   "bin": {
     "cli-gen": "./generator/bin/generator.js"
   },
-  "jest": {
-    "testEnvironment": "node"
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }

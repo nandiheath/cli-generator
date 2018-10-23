@@ -18,6 +18,7 @@
   },
   "scripts": {
     "test": "nyc mocha --recursive test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "eslint .",
     "precommit": "lint-staged"
   },
@@ -33,20 +34,22 @@
     "bluebird": "^3.5.2",
     "chalk": "^2.4.1",
     "commander": "^2.18.0",
-    "eslint": "^5.6.0",
-    "eslint-plugin-node": "^7.0.1"
+    "ejs": "^2.6.1",
+    "minimatch": "^3.0.4",
+    "mkdirp": "^0.5.1"
   },
   "bin": {
     "cli-gen": "./generator/bin/generator.js"
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "eslint": "^5.6.0",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-mocha": "^5.2.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.0.1"
+    "eslint-plugin-mocha": "^5.2.0"
   }
 }

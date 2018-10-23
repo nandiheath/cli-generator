@@ -1,7 +1,6 @@
 module.exports = {
     "extends": "airbnb-base",
     "rules": {
-        "indent": ["error", 4],
         'no-restricted-syntax': [
             'error',
             'LabeledStatement',

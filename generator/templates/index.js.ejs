@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+
+// default logger
+const { log } = console;
+
+/**
+ * Termination process
+ */
+function end() {
+  process.exit(1);
+}
+
+function math(a, b, options) {
+  if (options.add) {
+    log(`Going to add ${a} and ${b} ..`);
+    const result = parseInt(a, 10) + parseInt(b, 10);
+    log(`Result : ${result}`);
+  } else if (options.subtract) {
+    log(`Going to subtract ${b} from ${a} ..`);
+    const result = parseInt(a, 10) - parseInt(b, 10);
+    log(`Result : ${result}`);
+  } else {
+    program.help();
+  }
+  end();
+}
+
+
+program
+  .version('0.1.0');
+
+/**
+ * Simple mathematic calcuation
+ */
+program
+  .command('math <a> <b>')
+  .description('do the mathemathic calculation')
+  .option('-a, --add', 'Add')
+  .option('-s, --subtract', 'Subtract')
+  .action(math);
+
+program.parse(process.argv);
+
+// If no arguments we should output the help
+if (!program.args.length) program.help();

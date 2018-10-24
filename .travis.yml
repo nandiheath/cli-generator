@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8.9"
+  - "8.12"
   - "9.2"
 matrix:
   fast_finish: true
@@ -18,7 +18,7 @@ before_install:
   # - "test ! -d node_modules || npm prune"
   # - "test ! -d node_modules || npm rebuild"
 script:
-  - "npm run test"
-after_success: npm run coverage
+  - "npm run test-ci"
+# after_success: npm run coverage
 
 

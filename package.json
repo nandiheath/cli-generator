@@ -1,6 +1,6 @@
 {
   "name": "cli-generator",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A Command Line Interface generator",
   "homepage": "https://github.com/nandiheath/cli-generator#readme",
   "author": "Nandi Wong",

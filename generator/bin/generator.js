@@ -6,7 +6,7 @@ const Promise = require('bluebird');
 const chalk = Promise.promisifyAll(require('chalk'));
 const path = require('path');
 const mkdirp = require('mkdirp');
-const minimatch = require('minimatch');
+// const minimatch = require('minimatch');
 const ejs = require('ejs');
 const util = require('util');
 
@@ -95,13 +95,13 @@ function mkdir(base, dir) {
 /**
  * Copy multiple files from template directory.
  */
-function copyTemplates(fromDir, toDir, regex) {
-  fs.readdirSync(path.join(TEMPLATE_DIR, fromDir))
-    .filter(minimatch.filter(regex, { matchBase: true }))
-    .forEach((name) => {
-      copyTemplate(path.join(fromDir, name), path.join(toDir, name));
-    });
-}
+// function copyTemplates(fromDir, toDir, regex) {
+//   fs.readdirSync(path.join(TEMPLATE_DIR, fromDir))
+//     .filter(minimatch.filter(regex, { matchBase: true }))
+//     .forEach((name) => {
+//       copyTemplate(path.join(fromDir, name), path.join(toDir, name));
+//     });
+// }
 
 const ESLINT_PRESETS = ['default', 'airbnb'];
 

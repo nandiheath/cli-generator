@@ -157,7 +157,7 @@ async function main() {
 
   // Write the eslintignore and gitignore files
   copyTemplate(`.eslintignore`, path.join(dir, '.eslintignore'));
-  copyTemplate(`.gitignore`, path.join(dir, '.gitignore'));
+  copyTemplate(`.gitignore-template`, path.join(dir, '.gitignore'));
 
   // Render the index.js file 
   const index = loadTemplate('index.js');
